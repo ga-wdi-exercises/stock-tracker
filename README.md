@@ -21,3 +21,7 @@ Create constructor functions for the two objects below, and add the associated m
 - Use Javascript to push the JSON for one of the stocks into your HTML when the page loads.
 - Instead of turning the JSON into HTML when the page loads, do it when something is clicked.
 - Instead of using just one specific stock, add in the functionality to let the user choose their stock. 
+
+## Can I use jQuery?
+
+Sure!
