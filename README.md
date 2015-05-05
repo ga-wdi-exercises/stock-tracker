@@ -4,7 +4,7 @@
 
 Using the `seeds.json` file to supply data, create a webpage for managing a stock portfolio. To start, we'll use the mock data provided in the `seeds.json` file.
 
-Include Javascript that describes the two objects below, as well as the associated methods. You can add methods and properties as necessary!
+Create constructor functions for the two objects below, and add the associated methods to object's prototype. You can add methods and properties as necessary!
 
 - `interface`
   - `lookup`: Search `seeds.json` for a user-input stock symbol and retrieve its data
