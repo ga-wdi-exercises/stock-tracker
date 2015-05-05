@@ -2,7 +2,7 @@
 
 ## Object-Oriented Javascript
 
-Using the `data` variable included in `index.html` to supply data, create a webpage for managing a stock portfolio. To start, we'll use the mock data provided in the `seeds.json` file.
+Using the `data` variable included in `index.html` to supply data, create a webpage for managing a stock portfolio. 
 
 Create constructor functions for the two objects below, and add the associated methods to object's prototype. You can add methods and properties as necessary!
 
