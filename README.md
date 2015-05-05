@@ -1,16 +1,29 @@
-# Create a Stock Portfolio Tracker
+## AJAX
 
-## Object-Oriented Javascript
+Update your stock tracker to use real data from an API, Instead of using the `seeds.json` file.
 
-Using the `seeds.json` file to supply data, create a webpage for managing a stock portfolio. To start, we'll use the mock data provided in the `seeds.json` file.
+The Markit On Demand API provides a handy unauthenticated api:
 
-Include Javascript that describes the two objects below, as well as the associated methods. You can add methods and properties as necessary!
+http://dev.markitondemand.com/
+
+`GET` requests generally look like this:
+
+http://dev.markitondemand.com/api/v2/quote/json?symbol=aapl
+
+Note the `/json`. This API returns XML by default, so you need to specify that you want JSON.
+
+---
+
+Your objects should be updated to incorporate the following functionalities:
 
 - `interface`
-  - `lookup`: Search `seeds.json` for a user-input stock symbol and retrieve its data
+  - `lookup`: Search the API for a user-input stock symbol and return its data
 - `stock`
-  - `display`: Display the information about the given stock
-  - `calculate`: Calculate the total value of a user-input number of shares in this stock
+  - `refresh`: Update the data currently being displayed with the most recent data from the API
 - `portfolio`
-  - `display`: Display the information about all stocks included in the `seeds.json` file 
-  - `calculate`: Calculate the total value of all stocks for which the user has input a number of shares
+  - `add`: Add a stock to an array of stocks, held in-memory (no using databases yet!)
+  - `refresh`: Refresh the data for all stocks in the portfolio array
+
+#### Bonus:
+
+- Add functionality to `interface` such that as a user begins to type the name or symbol of a stock, it searches for the complete name and symbol of the stock and makes suggestions. See: http://markitondemand.github.io/DataApis/LookupSample/
