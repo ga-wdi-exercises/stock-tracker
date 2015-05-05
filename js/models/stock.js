@@ -104,3 +104,49 @@ var data = [
 ];
 
 // define your Stock model here
+var Stock = function (symbol){
+    var symbol = symbol;
+    var price = "";
+    var companyName= "";
+    var numShares= 0;
+    var totalValue= price*numShares;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
