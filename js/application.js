@@ -1,1 +1,2 @@
-// instantiate a StockView
+var stock = new Stock("AOL");
+console.log(stock)
