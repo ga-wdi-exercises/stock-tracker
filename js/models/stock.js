@@ -6,4 +6,18 @@ var data = [{"Status":"SUCCESS","Name":"Apple Inc","Symbol":"AAPL","LastPrice":1
             {"Status":"SUCCESS","Name":"Facebook, Inc.","Symbol":"FB","LastPrice":78.81,"Change":-0.179999999999993,"ChangePercent":-0.227876946448908,"Timestamp":"Mon May 4 15:59:00 UTC-04:00 2015","MSDate":42128.6659722222,"MarketCap":221317079160,"Volume":839079,"ChangeYTD":78.02,"ChangePercentYTD":1.01256088182518,"High":79.69,"Low":78.64,"Open":79.28}];
 
 
-// define your Stock model here
+            var Stock = function(symbol){
+                for(var i = 0; i < data.length; i++){
+                    if(data[i]["Symbol"] === symbol){
+                        this.price = data[i]["LastPrice"]
+                        this.companyName = data[i]["Name"];
+                        break;
+                    }
+                }
+                this.numShares = 0;
+            }
+            Stock.prototype = {
+                totalValue: function(){
+                    return this.price * this.numShares
+                }
+            }
