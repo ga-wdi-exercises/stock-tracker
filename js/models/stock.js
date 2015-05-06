@@ -126,7 +126,7 @@ Stock.prototype = {
 
 function updateShares(value) {
   this.numShares = value;
-  console.log("updateShares")
+  console.log("updateShares");
 }
 
 function totalValue(){

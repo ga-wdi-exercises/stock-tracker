@@ -3,10 +3,8 @@
 var StockView = function(selector){
   this.model;
   this.view = document.querySelector(selector)
-  this.el = document.querySelector("#body");
   this.initialize();
   this.updateShares();
-
 
 }
 
@@ -35,14 +33,11 @@ StockView.prototype.submitEventHandler = function(event) {
   this.stockLookUp(symbolValue);
 }
 
-StockView.prototype.renderStock = function(){
-  this.detailsView.querySelector("#name").innerText = this.model.symbol;
-}
-
 StockView.prototype.stockLookUp = function(symbolValue) {
   this.model = new Stock(symbolValue);
   console.log(this.model);
   console.log(this.model.totalValue());
   document.getElementById("name").innerText = "Name: " + this.model.companyName + "";
+  document.getElementById("price").innerText = "Current Price: $" + this.model.price + "";
   document.getElementById("symbol").innerText = "Symbol: " + this.model.symbol + "";
 }
