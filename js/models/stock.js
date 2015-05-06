@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 var data = [
     {
         "Status": "SUCCESS",
@@ -104,3 +106,18 @@ var data = [
 ];
 
 // define your Stock model here
+var Stock = function(symbol){
+  // var currentStock = symbol soemthing something
+  // search for symbol in var data
+  // something like data([Symbol: symbol])
+  // this.price
+  // this.companyName
+  // this.numShares
+  // this.totalValue
+}
+
+Stock.prototype = {
+}
+
+
+})
