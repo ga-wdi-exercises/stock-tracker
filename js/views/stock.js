@@ -32,6 +32,18 @@ StockView.prototype = {
   },
 
   render: function(){
+
+          if (document.querySelector("li") !== null)
+          {
+              // console.log("working?")
+              // var elem = document.querySelector("li");
+              // elem.parentNode.removeChild(elem);
+              //the above only removes one element so not using
+
+              //the below removes all the elements picked, li
+              $('li').remove();
+          }
+
           // var stockView = $this.each(function(i,value){
           var li = document.createElement("li")
           console.log("RENDER");
