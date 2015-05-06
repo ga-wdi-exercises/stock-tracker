@@ -1,0 +1,45 @@
+body{
+  background-color: #000;
+  color: green;
+  text-align: center;
+  font-family: 'VT323', 'Inconsolata', monospace;
+  font-size: 2em;
+}
+
+h1{
+  font-size: 4em;
+}
+
+h2{
+  font-size: 2em;
+}
+
+#symbol, #shares{
+  width:4em;
+  border: 8px solid #fff;
+  color: #fff;
+  font-family: 'VT323', 'Inconsolata', monospace;
+  font-size: 2em;
+  border-radius: 10%;
+  position:relative;
+  /*top:30%;*/
+  margin:0 auto;
+  /*line-height:144px;*/
+  text-align:right;
+  padding:0px 24px;
+  background-color:transparent;
+}
+
+#submit{
+ width:3em;
+ border: 2px solid #fff;
+ color: #fff;
+ font-family: 'VT323', 'Inconsolata', monospace;
+ font-size: 1em;
+ border-radius: 10%;
+ position:relative;
+ /*top:30%;*/
+ margin:0 auto;
+ background-color:transparent; 
+}
+

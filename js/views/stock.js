@@ -14,7 +14,7 @@ StockView.prototype = {
     var companyName = document.querySelector(".company-name");
     companyName.innerHTML = stock.companyName;
     var price = document.querySelector(".price");
-    price.innerHTML = stock.price;
+    price.innerHTML = "$" + stock.price.toFixed(2);
     var totalValue = document.querySelector(".total-value");
     totalValue.innerHTML = "The total value at " + stock.numShares + " shares is $" + stock.totalValue + "."; 
   },
