@@ -4,7 +4,9 @@ var SymbolView = function (symbol){
   // console.log(symbol)
   //display the Symbol
   var li = document.createElement("li")
-  li.innerHTML = symbol.price
+//  li.innerHTML = .values(symbol)
+ li.innerHTML = " stock name: "  + symbol.name + " / price: " + symbol.price
+  //how can I also show the symbol.name and symbol.price here?
   return li
 }
 
