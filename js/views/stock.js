@@ -32,6 +32,7 @@ StockView.prototype.submitEventHandlerShares = function(event){
 StockView.prototype.sharesMath = function(sharesValue){
 	this.model.updateShares(sharesValue);
 	console.log(this.model.totalValue());
+	document.querySelector("#found-shares-value").innerHTML = "Your total: $" + this.model.totalValue();
 }
 
 StockView.prototype.submitEventHandler = function(event){
@@ -45,7 +46,5 @@ StockView.prototype.lookupStock = function(symbolValue){
 	document.querySelector("#found-name").innerHTML = this.model.name;
 	document.querySelector("#found-price").innerHTML = "$" + this.model.price; + " per stock";
 	var sharesValueAmount = this.model.totalValue();
-	document.querySelector("#found-shares-value").innerHTML = "$" + sharesValueAmount + " your value";
-	console.log(this.model);
-	console.log(this.model.totalValue());
+	document.querySelector("#found-shares-value").innerHTML = "Your total: ?";
 }
