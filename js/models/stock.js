@@ -104,3 +104,26 @@ var data = [
 ];
 
 // define your Stock model here
+// `Stock` Model
+//   - Your constructor function should work like `new Stock(symbol)` where symbol is something like 'AAPL'. It should use the 'symbol' property to lookup the correct stock from the 'data' provided.
+//   - `price`: the price of the stock from the data provided
+//   - `companyName`: the company name of the stock from the data provided
+//   - `numShares`: defaults to 0, but the value of this property may be updated by the view.
+//   - `totalValue`: returns the price * the number of shares.
+
+var Stock = function(symbol){
+   this.symbol = symbol
+   this.numShares = 0
+   for(var i = 0; i < data.length; i++){
+     if (data[i]["Symbol"] === symbol)
+        this.price = data[i]["LastPrice"]
+        this.companyName = data[i]["Name"]
+  }
+}
+
+Stock.prototype = {
+
+  totalValue: function(){
+    return this.price * this.numShares;
+  }
+}
