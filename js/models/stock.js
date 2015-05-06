@@ -104,3 +104,31 @@ var data = [
 ];
 
 // define your Stock model here
+
+
+
+var Stock = function(symbol){
+  for(var i = 0; i < data.length; i++)
+    if(data[i].Symbol == symbol) {
+      var result = data[i];
+      this.price = result.LastPrice;
+      this.symbol = result.Symbol;
+      this.companyName = result.Name;
+      this.numShares = 0;
+    }
+}
+
+
+Stock.prototype = {
+  updateShares: updateShares,
+  totalValue: totalValue
+}
+
+function updateShares(value) {
+  this.numShares = value;
+  console.log("updateShares")
+}
+
+function totalValue(){
+  return parseInt(this.price * this.numShares);
+}
