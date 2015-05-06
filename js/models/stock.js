@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
 var userInput = ""
 var data = [
     {
@@ -106,38 +106,19 @@ var data = [
 ];
 
 
-
-  $(".submit").click(function(event){
-    event.preventDefault();
-    if( $(".user_input_symb").val() ){
-      userInput = $(".user_input_symb").val();
-      }
-    var yo = new Stock(userInput)
-  })
-
-
   var Stock = function(symbol){
-    this.findBySymbol(symbol);
-    this.render(symbol);
+    return this.findBySymbol(symbol);
 
   }
 
 
     Stock.prototype = {
 
-      render: function(symbol){
-        var dataEl = document.createElement("div");
-        $("body").append(dataEl);
-        dataEl.className = "data";
-        dataEl.innerHTML = this.findBySymbol(symbol);
-      },
-
       findBySymbol: function(symbol){
-
         for(var i=0; i<data.length; i++){
           if(data[i]["Symbol"] === symbol){
             console.log(data[i]);
-            var ary = [data[i].Name, data[i].Symbol, data[i].LastPrice, data[i].Change];
+            var ary = [data[i].Name, data[i].Symbol, data[i].Price, data[i].Change];
             return ary
             }
           }
@@ -145,8 +126,3 @@ var data = [
 
 
     }
-
-
-
-
-});
