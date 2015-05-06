@@ -2,6 +2,12 @@
 
 Update your stock tracker to use real data from an API, Instead of using the `seeds.json` file.
 
+If you’d like a fresh start, feel free to use the starter code provided in this branch:
+
+    $ git remote add upstream git@github.com:ga-dc/stock-tracker.git
+    $ git fetch upstream ajax
+    $ git checkout -b w08d03 upstream/ajax
+
 The Markit On Demand API provides a handy unauthenticated api:
 
 http://dev.markitondemand.com/
@@ -16,8 +22,6 @@ Note the `/json`. This API returns XML by default, so you need to specify that y
 
 Your objects should be updated to incorporate the following functionalities:
 
-- `interface`
-  - `lookup`: Search the API for a user-input stock symbol and return its data
 - `stock`
   - `refresh`: Update the data currently being displayed with the most recent data from the API
 - `portfolio`
