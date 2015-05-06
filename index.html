@@ -3,13 +3,12 @@
   <head>
     <title>Stock Tracker</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="js/models/stock.js"></script>
-    <script type="text/javascript" src="js/views/stock.js"></script>
-    <script type="text/javascript" src="js/application.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
   </head>
   <body>
   <h1>Stock Tracker</h1>
-    <form>
+    <form id="#lookup-stock">
       <label for="symbol">Symbol</label>
       <input type="text" name="symbol" id="symbol">
       <label for="shares">Shares</label>
@@ -17,4 +16,12 @@
       <input type="submit" name="submit">
     </form>
   </body>
+  <div class="results">
+     <h2 class="company-name"></h2>
+     <h3 class="price"></h3>
+     <h3 class="total-value"></h3>
+  </div>
+  <script type="text/javascript" src="js/models/stock.js"></script>
+    <script type="text/javascript" src="js/views/stock.js"></script>
+    <script type="text/javascript" src="js/application.js"></script>
 </html>
