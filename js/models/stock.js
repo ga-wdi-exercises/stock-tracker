@@ -5,5 +5,23 @@ var data = [{"Status":"SUCCESS","Name":"Apple Inc","Symbol":"AAPL","LastPrice":1
             {"Status":"SUCCESS","Name":"Twitter Inc","Symbol":"TWTR","LastPrice":37.89,"Change":0.00999999999999801,"ChangePercent":0.0263991552270275,"Timestamp":"Mon May 4 15:59:00 UTC-04:00 2015","MSDate":42128.6659722222,"MarketCap":24794496090,"Volume":1394555,"ChangeYTD":35.87,"ChangePercentYTD":5.63144689155284,"High":38.96,"Low":37.56,"Open":38.7},
             {"Status":"SUCCESS","Name":"Facebook, Inc.","Symbol":"FB","LastPrice":78.81,"Change":-0.179999999999993,"ChangePercent":-0.227876946448908,"Timestamp":"Mon May 4 15:59:00 UTC-04:00 2015","MSDate":42128.6659722222,"MarketCap":221317079160,"Volume":839079,"ChangeYTD":78.02,"ChangePercentYTD":1.01256088182518,"High":79.69,"Low":78.64,"Open":79.28}];
 
+// Your constructor function should work like new Stock(symbol)
+// where symbol is
+// something like 'AAPL'. It should use the 'symbol' property
+// to lookup the correct
+// stock from the 'data' provided.
 
-// define your Stock model here
+//
+// var symbol = $("#search-ticker")
+// console.log(symbol)
+
+var Stock = function( symbol ){
+  for( var i = 0; i < data.length; i++ ){
+    if( data[i]["Symbol"] === symbol ){
+      this.price = data[i]["LastPrice"]
+      this.companyName = data[i]["Name"]
+      this.numShares = 0
+      this.totalValue = (this.price) * (this.numShares)
+    }
+  }
+}
