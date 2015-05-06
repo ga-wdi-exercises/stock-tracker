@@ -21,5 +21,7 @@ StockView.prototype = {
     $("#stock-name").text(this.model.companyName);
     $("#stock-price").text(this.model.price);
     $("#total-value").text(this.model.totalValue());
+    $("#stock-name").text(name)
+    $("#stock-price").text(price);
   }
 }
