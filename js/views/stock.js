@@ -18,8 +18,8 @@ StockView.prototype = {
   },
 
   render: function() {
-    $("#stock-name").text(this.model.companyName);
-    $("#stock-price").text(this.model.price);
-    $("#total-value").text(this.model.totalValue());
+    $("#stock-name").text(this.model.data.name);
+    $("#stock-price").text(this.model.data.price);
+    $("#total-value").text(this.model.data.totalValue());
   }
 }

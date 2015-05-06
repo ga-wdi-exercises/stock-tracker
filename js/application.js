@@ -1,4 +1,5 @@
 // instantiate a StockView
+var stockView
 $('document').ready(function() {
-  var stockView = new StockView();
+  stockView = new StockView();
 });
