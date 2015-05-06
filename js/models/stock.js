@@ -104,3 +104,28 @@ var data = [
 ];
 
 // define your Stock model here
+// var Stock = function() {
+//  for(var i = 0; i < data.length; i++)
+//   if (data[i].symbol ===  symbol)
+//     return
+// }
+//
+//
+//
+// var facebook = new Stock(data, "FB");
+
+var Stock = function(symbol){
+  this.data;
+  for(var x = 0; x < data.length; x++){
+    if(data[x]["Symbol"] === symbol){
+      this.data = data[x];
+    }
+  }
+  // this.symbol = this.data["Symbol"];
+  this.companyName = this.data["Name"];
+  this.price = this.data["LastPrice"];
+}
+
+// var Stock.prototype = function(){
+//
+// }
