@@ -5,6 +5,7 @@ $(document).ready(function(){
     this.el = $(selector);
     this.model = model;
     this.render();
+    
   };
 
   StockView.prototype = {
