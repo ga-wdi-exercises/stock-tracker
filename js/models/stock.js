@@ -1,12 +1,31 @@
 // Then define your model, and test that you can create a new instance given a symbol, and that
 // it has the appropriate functionality (price, totalValue, etc).
+//original code:
+// var Stock = function(){
+//   this.symbols = []
+// }
+//
+// var Symbol = function (value) {
+//     this.value = value
+//     stock.symbols.push (this)
+//   }
+
 var Stock = function(){
   this.symbols = []
+
 }
 
 var Symbol = function (value) {
-    this.value = value
-    stock.symbols.push (this)
+    //this.value = value
+    for(var i = 0; i < data.length; i++){
+      if (data[i].Symbol === value){
+        this.data = data[i]
+        this.price = data[i].LastPrice
+        this.name = data[i].Name
+        stock.symbols.push (this)
+        console.log(this)
+      }
+    }
 }
 // Stock.prototype = {
 //   assignStock: function(symbol){
@@ -17,38 +36,6 @@ var Symbol = function (value) {
 //     this.value = data.Symbol[i]
 //   }
 // }
-
-
-
-
-
-
-//IN CLASS
-// var Stock = function (symbol){
-//   for(var i = 0; i < data.Symbols; i++){
-//     if (data[i].symbol == symbol){
-//       this.data = data[i]
-//       this.price = this.data.price
-//     }
-//   }
-// }
-//
-// var StockView = function(stock){
-//   this.model = stock
-//   this.el = document.querySelector(some_selector)
-//   this.render()
-// }
-
-
-
-
-
-
-
-
-
-
-
 
 var data = [{"Status":"SUCCESS","Name":"Apple Inc","Symbol":"AAPL","LastPrice":128.7,"Change":0,"ChangePercent":0,"Timestamp":"Mon May 4 15:59:00 UTC-04:00 2015","MSDate":42128.6659722222,"MarketCap":741444561000,"Volume":3318886,"ChangeYTD":110.38,"ChangePercentYTD":16.5972096394274,"High":130.55,"Low":128.27,"Open":129.58},
             {"Status":"SUCCESS","Name":"Google Inc","Symbol":"GOOGL","LastPrice":552.78,"Change":1.62,"ChangePercent":0.293925538863489,"Timestamp":"Mon May 4 15:59:00 UTC-04:00 2015","MSDate":42128.6659722222,"MarketCap":188341543260,"Volume":74680,"ChangeYTD":530.66,"ChangePercentYTD":4.16839407530246,"High":556.61,"Low":547.6,"Open":550.1},
