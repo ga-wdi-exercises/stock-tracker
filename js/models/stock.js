@@ -119,12 +119,11 @@ var Stock = function(symbol){
     if(data[x]["Symbol"] === symbol){
       this.companyName = data[x]["Name"];
       this.price = data[x]["LastPrice"];
+      this.numShares = 0;
+      this.totalValue = (parseInt(this.numShares) * parseInt(this.price))
     }
   }
+
   // this.symbol = this.data["Symbol"];
-
+  
 }
-
-// var Stock.prototype = function(){
-//
-// }
