@@ -12,9 +12,9 @@ var StockView = function( symbol ){
 
 StockView.prototype = {
   render: function(){
-    $("body").append("<p>Price: this.model.price</p>")
-    $("body").append("<p>Name: this.companyName</p>")
-    $("body").append("<p>Shares Owned: this.numShares</p>")
-    $("body").append("<p>Total Value: this.totalValue</p>")
+    $("body").append("<p>Price: </p>" + this.model.price)
+    $("body").append("<p>Name: </p>" + this.companyName)
+    $("body").append("<p>Shares Owned: </p>" + this.numShares)
+    $("body").append("<p>Total Value: </p>" + this.totalValue)
   }
 }
