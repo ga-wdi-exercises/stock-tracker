@@ -1,34 +1,68 @@
 // define your StockView here
 
   //forEach will pull each array object(stock) from the data array
-var StockView = function(data_array){
-  var searchStock = document.querySelector("#search-stock-button")
-  this.newStockText = document.querySelector("#new-stock-search")
-  this.stockAttributeList = document.querySelector(".stock-attributes")
-  var selectedStock = searchStock.addEventListener("click", this.lookupSymbol);
+  var StockView = function(data_array){
+    // below 2 was commented out by Adam
 
-  this.model = selecteStock
-  this.render()
+    var searchStock = document.querySelector("#search-stock-button");
+    searchStock.addEventListener("click", this.lookupSymbol.bind(this));
+
+    this.stockAttributeList = document.querySelector(".stock-attributes")
   // this.searchStock.bind(this) ) //not needed
 }
 
     // if stock.  "Symbol": "AAPL",
 
 StockView.prototype = {
-  lookupSymbol: function( search ){
-    // event.preventDefault() //not needed
-    var stock = new Stock( this )
+  lookupSymbol: function() {
+    var newStockText = document.querySelector("#new-stock-search").value;
+    console.log(newStockText);
+
+    var stock = new Stock( newStockText );
+    console.log("var stock")
+    console.log(stock)
+
+
+
+  //   for( var i = 0; i < this.model.cards.length; i++ )
+  // var cardView = new CardView( this.model.cards[i] )
+
+    this.model = stock;
+    this.render();
   },
 
   render: function(){
-      //each will pull each key value of each stock
-          var stockView = this.each(function(i,value){
+          // var stockView = $this.each(function(i,value){
           var li = document.createElement("li")
-          // li.innerHTML = i:value
+          console.log("RENDER");
+          console.log(this.model.price)
+
+          var li = document.createElement("li")
+          li.innerHTML = this.model.companyName
           this.stockAttributeList.appendChild(li)
-          });
-  }
+
+          var li = document.createElement("li")
+          li.innerHTML = this.model.price
+          this.stockAttributeList.appendChild(li)
+
+          var li = document.createElement("li")
+          li.innerHTML = this.model.totalValue
+          this.stockAttributeList.appendChild(li)
+        }
 }
+//Below is in my model file, just for reference
+// var Stock = function(stock_search) {
+//   var self = this;
+//   data.forEach( function(stock) {
+//     if (stock_search === stock["Symbol"]) {
+//       self.symbol = stock["Symbol"]
+//       // The info is the price, companyName and totalValue.
+//       self.price = stock["LastPrice"]
+//       self.companyName = stock["Name"]
+//       self.totalValue = stock["MarketCap"]
+//     }
+//   });
+// }
 
 // TrilloView.prototype = {
 //   newCard: function( event ){

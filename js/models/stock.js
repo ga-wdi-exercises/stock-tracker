@@ -107,13 +107,21 @@ var data = [
 
 var Stock = function(stock_search) {
   var self = this;
+  // console.log("hello");
+
   data.forEach( function(stock) {
+    // console.log("Symbol equals")
+    // console.log(stock["Symbol"])
     if (stock_search === stock["Symbol"]) {
+      // console.log("match");
       self.symbol = stock["Symbol"]
       // The info is the price, companyName and totalValue.
       self.price = stock["LastPrice"]
       self.companyName = stock["Name"]
+      // console.log(self.companyName)
       self.totalValue = stock["MarketCap"]
+      // break;
     }
+
   });
 }
