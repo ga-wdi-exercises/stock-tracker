@@ -1,3 +1,4 @@
+
 var data = [
     {
         "Status": "SUCCESS",
@@ -103,4 +104,27 @@ var data = [
     }
 ];
 
-// define your Stock model here
+
+
+function Stock(symbol) {
+  for (var i = 0; i < data.length; i++) {
+    if (data[i]["Symbol"] == symbol) {
+      this.price = data[i]['LastPrice'];
+      this.name = data[i]['Name'];
+      this.numShares = 0;
+      this.totalValue = this.price * this.numShares;
+    }
+    else {
+      console.log("i don't see anything")
+    }
+  }
+}
+
+
+
+
+
+
+
+// event.preventDefault();
+// symbol = document.querySelector("symbol_field").value;
