@@ -103,4 +103,32 @@ var data = [
     }
 ];
 
+
+
+
+
+
 // define your Stock model here
+var Stock = function(symbol) {
+  this.symbol = symbol;
+
+  function findPrice(){
+  for (var i = 0; i < data.length; i++){
+      if (data[i].Symbol === symbol){
+        price = data[i].LastPrice;
+        return price;
+      }
+  }
+  }
+
+  function findName(){
+  for (var i = 0; i < data.length; i++) {
+      if (data[i].Symbol === symbol){
+          companyName = data[i].Name;
+          return companyName;
+      }
+  };
+  }
+
+
+}
