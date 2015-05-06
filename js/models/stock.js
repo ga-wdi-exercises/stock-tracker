@@ -1,6 +1,3 @@
-
-
-
 var data = [
     {
         "Status": "SUCCESS",
