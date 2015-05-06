@@ -1,3 +1,4 @@
 // instantiate a StockView
-
-var page = new StockView("div#stockBox");
+$('document').ready(function() {
+  var stockView = new StockView();
+});
