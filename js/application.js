@@ -1,3 +1,3 @@
 // instantiate a StockView
-var stock = new Stock()
-var stockView = new StockView("", stock)
+var stock = new Stock("AAPL");
+var stockView = new StockView("#stock", stock);
