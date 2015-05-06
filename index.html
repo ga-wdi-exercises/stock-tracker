@@ -3,10 +3,24 @@
   <head>
     <title>Stock Tracker</title>
     <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+  	<div id="symbol">
+    	<input id="symbol-text" type="text" placeholder="Enter Symbol"/>
+    	<button id="symbol-button">Find Symbol</button>
+    </div>
+    <div id="share">
+    	<input id="shares-text" type="text" placeholder= "Enter the number of shares"/>
+    	<button id="shares-button">Update Shares</button>
+    </div>
+    <div id="stock">
+    	<h2 id="name"></h2>
+    	<h2 id="price"></h2>
+    	<h2 id="shares"></h2>
+    	<h2 id="value"></h2>
+    </div>
     <script type="text/javascript" src="js/models/stock.js"></script>
     <script type="text/javascript" src="js/views/stock.js"></script>
     <script type="text/javascript" src="js/application.js"></script>
-  </head>
-  <body>
   </body>
 </html>
