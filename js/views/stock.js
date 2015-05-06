@@ -1,27 +1,27 @@
-// define your StockView here
-var StockView = function(model){
-  this.model = model;
-  this.render();
+function StockView() {
+  $('#symbolButton').on('click', this.lookupSymbol.bind(this));
+  $('#numSharesButton').on('click', this.updateShares.bind(this));
 };
 StockView.prototype = {
-  render: function(){
-    var model = this.model;
-    $('#sym').text(model.symbol);
-    $('#name').text(model.companyName);
-    $('#price').text(model.price);
-    $('#shares').text(model.numShares);
-    $('#totalValue').text(model.totalValue());
-    $('#lookup').click(this.lookupSymbol.bind(this));
-    $('#update').click(this.updateShares.bind(this));
-    $('#symbol').val('');
-    $('#numShares').val('');
-  },
-  lookupSymbol: function(){
-    this.model = new Stock($('#symbol').val());
+  lookupSymbol: function() {
+    var symbol = $("#symbolInput").val();
+    this.model = new Stock(symbol);
     this.render();
   },
-  updateShares: function(){
-    this.model.setShares($('#numShares').val());
+  updateShares: function() {
+    this.model.numShares = parseInt($('#numSharesInput').val());
     this.render();
+  },
+  render: function() {
+    $('#sym').text('');
+    $('#sym').text(this.model.symbol);
+    $('#name').text('');
+    $('#name').text(this.model.companyName);
+    $('#price').text('');
+    $('#price').text('$' + this.model.price);
+    $('#shares').text('');
+    $('#shares').text(this.model.numShares);
+    $('#totalValue').text('');
+    $('#totalValue').text('$' + this.model.totalValue());
   }
 };
