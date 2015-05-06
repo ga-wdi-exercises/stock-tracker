@@ -112,7 +112,7 @@ var Stock = function(stock_search) {
   data.forEach( function(stock) {
     // console.log("Symbol equals")
     // console.log(stock["Symbol"])
-    if (stock_search === stock["Symbol"]) {
+    if (stock_search.toUpperCase() === stock["Symbol"]) {
       // console.log("match");
       self.symbol = stock["Symbol"]
       // The info is the price, companyName and totalValue.

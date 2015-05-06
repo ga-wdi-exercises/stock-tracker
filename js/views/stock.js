@@ -8,7 +8,11 @@
     searchStock.addEventListener("click", this.lookupSymbol.bind(this));
 
     this.stockAttributeList = document.querySelector(".stock-attributes")
-  // this.searchStock.bind(this) ) //not needed
+  // // this.searchStock.bind(this) ) //not needed
+
+  var stockShares = document.querySelector("#stock-shares-button");
+  stockShares.addEventListener("click", this.renderTotal.bind(this));
+
 }
 
     // if stock.  "Symbol": "AAPL",
@@ -21,14 +25,18 @@ StockView.prototype = {
     var stock = new Stock( newStockText );
     console.log("var stock")
     console.log(stock)
-
-
-
   //   for( var i = 0; i < this.model.cards.length; i++ )
   // var cardView = new CardView( this.model.cards[i] )
 
     this.model = stock;
     this.render();
+
+  },
+  renderTotal: function(){
+    var shares = document.querySelector("#number-of-shares").value
+    console.log(shares);
+    var total = shares*(this.model.price)
+    document.querySelector("#total-share-value").innerHTML = "$"+total
   },
 
   render: function(){
@@ -54,11 +62,11 @@ StockView.prototype = {
           this.stockAttributeList.appendChild(li)
 
           var li = document.createElement("li")
-          li.innerHTML = "Price per share: "+this.model.price
+          li.innerHTML = "Price per share: $"+this.model.price
           this.stockAttributeList.appendChild(li)
 
           var li = document.createElement("li")
-          li.innerHTML = "Market Value: "+this.model.totalValue
+          li.innerHTML = "Market Value: $"+this.model.totalValue
           this.stockAttributeList.appendChild(li)
         }
 }
