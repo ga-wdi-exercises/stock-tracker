@@ -7,7 +7,7 @@ practices in JS.
 
 Using the `data` variable included in `models/stock.js` to supply data, create a webpage for managing a stock portfolio.
 
-Your app should have the following constructors (and associated prototypes) as necesary:
+Your app should have the following constructors (and associated prototypes) as necessary:
 
 
 - `StockView`
@@ -28,7 +28,7 @@ Your app should have the following constructors (and associated prototypes) as n
 Write out the bare-minimum HTML you'd need for this app to work -- don't touch any CSS yet! Put in enough `<input>` fields to account for the different kinds of user input you'll need.
 
 Then define your model, and test that you can create a new instance given a symbol, and that
-it has the approprate functionality (price, totalValue, etc).
+it has the appropriate functionality (price, totalValue, etc).
 
 Then define your view, and test it's functionality in small pieces (i.e. make it render based on the associated model, then try having it update its model, etc).
 
