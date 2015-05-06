@@ -104,3 +104,27 @@ var data = [
 ];
 
 // define your Stock model here
+var Stock = function(symbol) {
+	for (var i = 0; i < data.length; i++){
+		if (data[i]["Symbol"] === symbol) {
+			this.data = data[i];
+			this.price = data[i]["LastPrice"];
+			this.companyName = data[i]["Name"];
+			break;
+		}
+	}
+	this.numShares = 0;
+}
+
+Stock.prototype = {
+  totalValue: function(){
+  	return this.price * this.numShares;
+	},
+	updateShares: function(){
+		var newSharesText = document.getElementById("update-shares");
+		var newShares = newSharesText.value;
+		this.numShares = newShares;
+		return this.numShares;
+	}
+}
+

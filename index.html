@@ -3,10 +3,26 @@
   <head>
     <title>Stock Tracker</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="js/models/stock.js"></script>
-    <script type="text/javascript" src="js/views/stock.js"></script>
-    <script type="text/javascript" src="js/application.js"></script>
   </head>
   <body>
+  	<div class = "stock">
+			<form action="#">
+			Symbol:<br>
+			<input type="text" name="lookup" placeholder="Enter stock symbol">
+			<input type="submit" value="Submit" id="lookup-submit">
+			<br>
+			Number of Shares:<br>
+			<input type="text" name="numShares" id="update-shares" placeholder="Enter current shares">
+			<input type="submit" value="Submit" id="update-submit">
+			<br><br>
+			Company Name:<br>
+
+			
+			</form>
+  	</div>
+
+  	<script type="text/javascript" src="js/models/stock.js"></script>
+    <script type="text/javascript" src="js/views/stock.js"></script>
+    <script type="text/javascript" src="js/application.js"></script>
   </body>
 </html>
