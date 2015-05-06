@@ -104,3 +104,30 @@ var data = [
 ];
 
 // define your Stock model here
+
+var Stock = function(symbol) {
+  this.symbol = symbol;
+
+  function findPrice(){
+  for (var i = 0; i < data.length; i++){
+      if (data[i].Symbol === symbol){
+        price = data[i].LastPrice;
+        return price;
+      }
+  }
+  }
+
+  function findName(){
+  for (var i = 0; i < data.length; i++) {
+      if (data[i].Symbol === symbol){
+          companyName = data[i].Name;
+          return companyName;
+      }
+  };
+  }
+
+  this.price = findPrice();
+  this.companyName = findName();
+  this.numShares = 0;
+  this.totalValue = this.price * this.numShares;
+}

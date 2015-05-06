@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Stock Tracker</title>
+    <title>$tock Tracker</title>
+    <link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="js/models/stock.js"></script>
-    <script type="text/javascript" src="js/views/stock.js"></script>
-    <script type="text/javascript" src="js/application.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
   </head>
   <body>
+  <h1>$tock Tracker</h1>
+    <form id="#lookup-stock">
+      <label for="symbol">Symbol</label>
+      <input type="text" name="symbol" id="symbol">
+      <label for="shares">Shares</label>
+      <input type="number" name="shares" id="shares">
+      <input type="submit" name="submit" id="submit">
+    </form>
   </body>
+  <div class="results">
+     <h2 class="company-name"></h2>
+     <h3 class="price"></h3>
+     <h3 class="total-value"></h3>
+  </div>
+  <footer>
+    <div class="marquee"></div>
+  </footer>
+  <script type="text/javascript" src="js/models/stock.js"></script>
+    <script type="text/javascript" src="js/views/stock.js"></script>
+    <script type="text/javascript" src="js/application.js"></script>
 </html>
