@@ -104,3 +104,26 @@ var data = [
 ];
 
 // define your Stock model here
+// var Stock = function() {
+//  for(var i = 0; i < data.length; i++)
+//   if (data[i].symbol ===  symbol)
+//     return
+// }
+//
+//
+//
+// var facebook = new Stock(data, "FB");
+
+var Stock = function(symbol){
+  for(var x = 0; x < data.length; x++){
+    if(data[x]["Symbol"] === symbol){
+      this.companyName = data[x]["Name"];
+      this.price = data[x]["LastPrice"];
+      this.numShares = 0;
+      this.totalValue = (parseInt(this.numShares) * parseInt(this.price))
+    }
+  }
+
+  // this.symbol = this.data["Symbol"];
+  
+}
