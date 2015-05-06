@@ -8,6 +8,7 @@ StockView.prototype = {
   lookupSymbol: function() {
     var symbol = $("#symbol-input").val();
     this.model = new Stock(symbol);
+    this.model.fetchStock();
     this.render();
     $('#cha-ching')[0].play();
   },
@@ -18,8 +19,8 @@ StockView.prototype = {
   },
 
   render: function() {
-    $("#stock-name").text(this.model.data.name);
-    $("#stock-price").text(this.model.data.price);
-    $("#total-value").text(this.model.data.totalValue());
+    $("#stock-name").text(name);
+    $("#stock-price").text(price);
+    $("#total-value").text(this.model.totalValue());
   }
 }
