@@ -3,6 +3,7 @@ function Stock(symbol) {
   this.symbol = symbol;
   this.numShares = 0;
   this.name = name;
+  // this.price = price;
 }
 
 Stock.prototype = {
@@ -13,11 +14,11 @@ Stock.prototype = {
       dataType: "jsonp"
     }).done(function(response){
       name = response.Name;
-      price = response.LastPrice;
+      lastPrice = response.LastPrice;
       console.log(name);
-      console.log(price);
+      console.log(lastPrice);
     });
   },
 
-  totalValue: function() { return price * this.numShares; }
+  totalValue: function() { return lastPrice * this.numShares; }
 }

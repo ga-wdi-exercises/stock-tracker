@@ -9,18 +9,21 @@ StockView.prototype = {
     var symbol = $("#symbol-input").val();
     this.model = new Stock(symbol);
     this.model.fetchStock();
-    this.render();
+    this.renderName();
     $('#cha-ching')[0].play();
   },
 
   updateShares: function() {
     this.model.numShares = parseInt($('#num-shares').val());
-    this.render();
+    this.renderValue();
   },
 
-  render: function() {
+  renderName: function() {
     $("#stock-name").text(name);
-    $("#stock-price").text(price);
-    $("#total-value").text(this.model.totalValue());
+  },
+
+  renderValue: function(){
+    $("#stock-price").text(lastPrice);
+    $("#total-value").text(this.model.totalValue().toFixed(2));
   }
 }
