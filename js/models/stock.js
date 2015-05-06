@@ -10,7 +10,7 @@ Stock.prototype = {
   },
   refresh: function(){
     return $.ajax({
-      url: "http://dev.markitondemand.com/api/v2/quote/jsonp?symbol=aapl",
+      url: "http://dev.markitondemand.com/api/v2/quote/jsonp?symbol=" + this.symbol,
       dataType: "jsonp",
       context: this
     }).done(function(data){
