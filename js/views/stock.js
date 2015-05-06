@@ -38,15 +38,15 @@ StockView.prototype = {
           console.log(this.model.price)
 
           var li = document.createElement("li")
-          li.innerHTML = this.model.companyName
+          li.innerHTML = "Company Name: "+this.model.companyName
           this.stockAttributeList.appendChild(li)
 
           var li = document.createElement("li")
-          li.innerHTML = this.model.price
+          li.innerHTML = "Price per share: "+this.model.price
           this.stockAttributeList.appendChild(li)
 
           var li = document.createElement("li")
-          li.innerHTML = this.model.totalValue
+          li.innerHTML = "Market Value: "+this.model.totalValue
           this.stockAttributeList.appendChild(li)
         }
 }
