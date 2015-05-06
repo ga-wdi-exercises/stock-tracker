@@ -33,6 +33,7 @@ StockView.prototype = {
 
   },
   renderTotal: function(){
+    document.querySelector("#total-share-value").innerHTML="";
     var shares = document.querySelector("#number-of-shares").value
     console.log(shares);
     var total = shares*(this.model.price)
@@ -50,6 +51,7 @@ StockView.prototype = {
 
               //the below removes all the elements picked, li
               $('li').remove();
+              document.querySelector("#total-share-value").innerHTML="";
           }
 
           // var stockView = $this.each(function(i,value){
