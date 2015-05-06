@@ -104,3 +104,35 @@ var data = [
 ];
 
 // define your Stock model here
+var stockSymbol = [];
+for(var i = 0; i < data.length; i++) {
+  var stuff = data[i].Symbol;
+  stockSymbol.push(stuff);
+};
+console.log(stockSymbol);
+
+var stockName = [];
+for(var i = 0; i < data.length; i++) {
+  var stuff = data[i].Name;
+  stockName.push(stuff);
+};
+console.log(stockName);
+
+var stockLastPrice = [];
+for(var i = 0; i < data.length; i++) {
+  var stuff = data[i].LastPrice;
+  stockLastPrice.push(stuff);
+};
+console.log(stockLastPrice);
+
+function Newstock(symbol){
+  this.name(stockName);
+  this.price(stockPrice);
+  this.numShare = 0;
+  this.value = function(){
+    numShare * price;
+  }
+};
+console.log(newStock)
+
+Apple.prototype = new Newstock("AAPL");
