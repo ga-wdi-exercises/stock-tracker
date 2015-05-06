@@ -104,3 +104,25 @@ var data = [
 ];
 
 // define your Stock model here
+var Stock = function(symbol){
+    for(i = 0; i < data.length; i++){
+        if (data[i].Symbol == symbol){
+            this.datum = data[i] //this.model is defining the variable model and setting it equal to what's on the other side of the equal sign
+        }
+    }
+    this.symbol = this.datum["Symbol"]
+    this.price = this.datum["LastPrice"]
+    this.companyName = this.datum["Name"]
+    this.numShares = 0
+    this.totalValue = 0
+}
+
+Stock.prototype = {
+    updateStock: function(symbol, shares){
+        this.symbol = symbol;
+        this.shares = shares;
+    },
+    totalValue: function(){
+        return this.price * this.numShares;
+    }
+}

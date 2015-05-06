@@ -2,11 +2,30 @@
 <html>
   <head>
     <title>Stock Tracker</title>
-    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+  	<div id="display">
+  		<!-- this will show: 
+  			stock symbol (company name)
+  			price 
+  			# of shares
+  			total value
+  			 -->
+  			 	<li class="stock-symbol">Stock Symbol</li>
+  			 	<li class="price">Price</li>
+  			 	<li class="shares">Shares</li>
+  			 	<li class="total-value">Value</li>
+  	</div>
+  	<div id="stock-info">
+      <input id="symbol" type="text" placeholder="What is the stock symbol?"/>
+      <input id="shares" type="text" placeholder="How many shares have you?"/>
+      <button id="button">Submit</button>
+    </div>
+
+  </body>
+  <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="js/models/stock.js"></script>
     <script type="text/javascript" src="js/views/stock.js"></script>
     <script type="text/javascript" src="js/application.js"></script>
-  </head>
-  <body>
-  </body>
 </html>
