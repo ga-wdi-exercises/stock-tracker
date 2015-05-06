@@ -9,23 +9,26 @@
   </head>
   <body>
     <div id=stock_search>
-      <input id="new-card-text" type="text" placeholder="Stock Symbol"/>
+      <input id="new-stock-search" type="text" placeholder="Stock Symbol"/>
       <button id="search-stock-button">Enter Stock Symbol</button>
     </div>
 
+    <div id="stock-display" class="stock_view">
+      <h2 class="stock-name">Stock Name</h2>
+      <ul class="stock-attributes">
+      </ul>
     </div>
-    <h1>Stock: </h1>
-  </body>
-</html>
+
+    <!-- this.newStockText = document.querySelector("#new-stock-search") -->
 
 
 
-StockView
+<!-- StockView
 
 model: points to an instance of a Stock model.
 render: updates the HTML on the page to reflect the info of the associated stock model. The info is the price, companyName and totalValue.
 'lookupSymbol': when the user enters a symbol, this should instantiate a new instance of a stock model and associate it with the model attribute of the view. It should then re-render the view.
-updateShares: when the user enters a number of shares, it should update the existing associated stock model, and then re-render the view
+updateShares: when the user enters a number of shares, it should update the existing associated stock model, and then re-render the view -->
 
 <!--
 var data = [

@@ -5,7 +5,8 @@ var StockView = function(data_array){
   var searchStock = document.querySelector("#search-stock-button")
   this.newStockText = document.querySelector("#new-stock-search")
   this.stockAttributeList = document.querySelector(".stock-attributes")
-  var selectedStock = searchStock.addEventListener("click", GetStock(newStockText));
+  var selectedStock = searchStock.addEventListener("click", this.lookupSymbol);
+
   this.model = selecteStock
   this.render()
   // this.searchStock.bind(this) ) //not needed
@@ -13,23 +14,19 @@ var StockView = function(data_array){
 
     // if stock.  "Symbol": "AAPL",
 
-
-
-
 StockView.prototype = {
-  newStock: function( search ){
+  lookupSymbol: function( search ){
     // event.preventDefault() //not needed
+    var stock = new Stock( this )
+  },
 
-    var stock = new Card( this )
-
-    render: function(){
+  render: function(){
       //each will pull each key value of each stock
           var stockView = this.each(function(i,value){
           var li = document.createElement("li")
-          li.innerHTML = i:value
+          // li.innerHTML = i:value
           this.stockAttributeList.appendChild(li)
           });
-        }
   }
 }
 
