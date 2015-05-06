@@ -42,6 +42,10 @@ StockView.prototype.submitEventHandler = function(event){
 
 StockView.prototype.lookupStock = function(symbolValue){
 	this.model = new Stock(symbolValue);
+	document.querySelector("#found-name").innerHTML = this.model.name;
+	document.querySelector("#found-price").innerHTML = this.model.price;
+	var sharesValueAmount = this.model.totalValue();
+	document.querySelector("#found-shares-value").innerHTML = sharesValueAmount;
 	console.log(this.model);
 	console.log(this.model.totalValue());
 }
