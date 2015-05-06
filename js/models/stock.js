@@ -104,3 +104,25 @@ var data = [
 ];
 
 // define your Stock model here
+
+var Stock = function(symbol){
+  var _symbol = symbol
+  this.getSymbol = function(){
+    return _symbol
+  }
+  this.setSymbol = function(symbol){
+    return _symbol = symbol
+  }
+}
+
+var Apple = function(symbol){
+  this.setSymbol(symbol)
+}
+
+Apple.prototype = new Stock("AAPL")
+Apple.prototype.open = function(){
+  return data[0]["Open"];
+}
+
+var appleStock = new Apple("AAPL")
+console.log(appleStock, appleStock.open);
