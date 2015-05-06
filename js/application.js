@@ -2,7 +2,7 @@
 $(document).ready(function()  {
 
 
-var stockView = new StockView("AAPL");
+var stockView = new StockView();
 
 
 });

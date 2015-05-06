@@ -115,15 +115,14 @@ var data = [
 // var facebook = new Stock(data, "FB");
 
 var Stock = function(symbol){
-  this.data;
   for(var x = 0; x < data.length; x++){
     if(data[x]["Symbol"] === symbol){
-      this.data = data[x];
+      this.companyName = data[x]["Name"];
+      this.price = data[x]["LastPrice"];
     }
   }
   // this.symbol = this.data["Symbol"];
-  this.companyName = this.data["Name"];
-  this.price = this.data["LastPrice"];
+
 }
 
 // var Stock.prototype = function(){
