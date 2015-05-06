@@ -24,6 +24,8 @@ Your objects should be updated to incorporate the following functionalities:
 
 - `stock`
   - `refresh`: Update the data currently being displayed with the most recent data from the API
+- `stockView`
+  - `lookupSymbol`: Search the API for a user-input stock symbol and return its data
 - `portfolio`
   - `add`: Add a stock to an array of stocks, held in-memory (no using databases yet!)
   - `refresh`: Refresh the data for all stocks in the portfolio array
