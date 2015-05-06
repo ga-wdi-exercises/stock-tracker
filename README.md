@@ -31,4 +31,4 @@ Your objects should be updated to incorporate the following functionalities:
 
 #### Bonus:
 
-- Add functionality to `interface` such that as a user begins to type the name or symbol of a stock, it searches for the complete name and symbol of the stock and makes suggestions. See: http://markitondemand.github.io/DataApis/LookupSample/
+- Add functionality such that as a user begins to type the name or symbol of a stock, it searches for the complete name and symbol of the stock and makes suggestions. See: http://markitondemand.github.io/DataApis/LookupSample/
