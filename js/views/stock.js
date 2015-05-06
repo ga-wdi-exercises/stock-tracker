@@ -9,12 +9,12 @@ StockView.prototype = {
 	render: function(){
 		var displayBox = document.getElementById("display")
 
-		var symbol = document.querySelector(".stock-symbol")
+		var stocksymbol = document.querySelector(".stocksymbol")
 		var price = document.querySelector(".price")
 		var shares = document.querySelector(".shares")
 		var totalValue = document.querySelector(".total-value")
 
-		stockSymbol.innerHTML = this.symbol
+		stocksymbol.innerHTML = this.symbol
 		price.innerHTML = this.price
 		shares.innerHTML = this.shares
 		totalValue.innerHTML = this.totalValue

@@ -7,6 +7,6 @@ var sharesField = document.getElementById("#shares")
 var button = document.getElementById("button")
 debugger;
 button.addEventListener("click", function(){
-	stock.updateStock(symbol.value, shares.value)
+	stock.updateStock(symbolField.value, sharesField.value)
 	stockView.render();
 })
