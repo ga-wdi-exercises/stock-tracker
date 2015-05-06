@@ -14,6 +14,17 @@ form {
 	margin-left:50px;
 }
 
+button:hover{
+	background-color: #90EE90;
+}
+
 #output {
-	margin-left: 60px;
+	margin-left: 70px;
+	margin-top: 10px;
+	font-size: 18px;
+	padding: 2px;
+}
+
+#found-name{
+	font-weight:bold;
 }

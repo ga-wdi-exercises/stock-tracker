@@ -1,14 +1,5 @@
-// define your StockView here
-
-// output company-name (id: company-name)
-// output company-price (id: company-price)
-// output share-value (id: share-value)
-
 var StockView = function(page){
 	this.view = document.querySelector(page);
-	// this.model = stock;
-	// this.el = document.querySelector(page);
-	// this.render(); //any time you instantiate, rendered immediately (defined in proto)
 	this.initialize();
 	this.updateShares();
 
