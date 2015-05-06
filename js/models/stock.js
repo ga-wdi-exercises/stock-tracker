@@ -104,3 +104,31 @@ var data = [
 ];
 
 // define your Stock model here
+
+var Stock = GetStock(stock_array,stock_search){ //stock_array = data
+
+  stock_array.forEach(function(stock){
+    console.log(stock )
+    // if stock.  "Symbol": "AAPL",
+    if (stock_search == stock.symbol)
+    {
+      this.symbol = stock.["Symbol"]
+      // The info is the price, companyName and totalValue.
+      this.price = stock.["LastPrice"]
+      this.companyName = stock.["Name"]
+      this.totalValue = stock.["MarketCap"]
+    }
+    else {(alert("Could not find the stock symbol"))}
+  }
+}
+
+    // if stock.  "Symbol": "AAPL",
+
+    if (stock.symbol == search)
+
+
+
+
+
+
+}
