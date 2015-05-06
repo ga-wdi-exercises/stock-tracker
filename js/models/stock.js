@@ -11,7 +11,7 @@ var Stock = function(symbol) {
 
   var divStocks = $("#showStocks")
 
-  for (var i = 0; i < data.length; i++){
+  for (var i = 0; i < this.data.length; i++){
     var stockName = data[i]["Name"]
     var stockPrice= data[i]["LastPrice"]
     var stockTotal= data[i]["Open"]
