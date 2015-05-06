@@ -1,3 +1,5 @@
+
+var userInput = ""
 var data = [
     {
         "Status": "SUCCESS",
@@ -103,4 +105,24 @@ var data = [
     }
 ];
 
-// define your Stock model here
+
+  var Stock = function(symbol){
+    return this.findBySymbol(symbol);
+
+  }
+
+
+    Stock.prototype = {
+
+      findBySymbol: function(symbol){
+        for(var i=0; i<data.length; i++){
+          if(data[i]["Symbol"] === symbol){
+            console.log(data[i]);
+            var ary = [data[i].Name, data[i].Symbol, data[i].Price, data[i].Change];
+            return ary
+            }
+          }
+        },
+
+
+    }
