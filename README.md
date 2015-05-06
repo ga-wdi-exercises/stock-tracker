@@ -2,6 +2,12 @@
 
 Update your stock tracker to use real data from an API, Instead of using the `seeds.json` file.
 
+If you’d like a fresh start, feel free to use the starter code provided in this branch:
+
+    $ git remote add upstream git@github.com:ga-dc/stock-tracker.git
+    $ git fetch upstream ajax
+    $ git checkout -b w08d03 upstream/ajax
+
 The Markit On Demand API provides a handy unauthenticated api:
 
 http://dev.markitondemand.com/
