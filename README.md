@@ -16,8 +16,6 @@ Note the `/json`. This API returns XML by default, so you need to specify that y
 
 Your objects should be updated to incorporate the following functionalities:
 
-- `interface`
-  - `lookup`: Search the API for a user-input stock symbol and return its data
 - `stock`
   - `refresh`: Update the data currently being displayed with the most recent data from the API
 - `portfolio`
