@@ -104,8 +104,6 @@ var data = [
 ];
 
 
-
-
 // define your Stock model here
 function Stock(symbol) {
   this.symbol = symbol;

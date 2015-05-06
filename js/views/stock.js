@@ -1,7 +1,6 @@
 // define your StockView here
 function StockView() {
   $('#update-symbol').on('click', this.lookupSymbol.bind(this));
-  $('#symbol-input').on('submit', this.lookupSymbol.bind(this));
   $('#update-shares').on('click', this.updateShares.bind(this));
 }
 
