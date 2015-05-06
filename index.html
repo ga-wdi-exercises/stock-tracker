@@ -3,10 +3,25 @@
   <head>
     <title>Stock Tracker</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="js/models/stock.js"></script>
-    <script type="text/javascript" src="js/views/stock.js"></script>
-    <script type="text/javascript" src="js/application.js"></script>
   </head>
   <body>
+    <header><h1>Stock Tracker</h1></header>
+    <div id="stock-box">
+      <form id="find-symbol">
+        <input id="new-symbol-text" type="text" placeholder="Symbol"></input>
+        <button id="new-symbol-button" type="submit">Update</button>
+      </form>
+        <div id="company-name">Company Name:<span id="found-name"></span></div>
+        <div id="company-price">Price: $<span id="found-price"></span></div>
+        <div id="share-value">Value: $</div>
+      <form id="find-shares">
+        <input id="new-number-shares-text" type="text" placeholder="# of Shares"></input>
+        <button id="new-number-shares-buton">Update</button>
+      </form>
+
+      </div>
+      <script type="text/javascript" src="js/models/stock.js"></script>
+      <script type="text/javascript" src="js/views/stock.js"></script>
+      <script type="text/javascript" src="js/application.js"></script>
   </body>
 </html>

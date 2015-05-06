@@ -7,3 +7,30 @@ var data = [{"Status":"SUCCESS","Name":"Apple Inc","Symbol":"AAPL","LastPrice":1
 
 
 // define your Stock model here
+
+var Stock = function(symbol){
+  for(i = 0; i < data.length; i++){
+    if(data[i].Symbol == symbol){
+      var result = data[i];
+      this.price =result.LastPrice;
+      this.name = result.Name;
+      this.symbol = result.Symbol;
+      this.numShares = 0;
+    }
+  }
+
+}
+
+Stock.prototype = {
+  updateShares: updateShares,
+  totalValue: totalValue
+}
+
+function updateShares(value){
+  this.numShares = value;
+  console.log("updateShares");
+}
+
+function totalValue(){
+  return this.price * this.numShares;
+}
