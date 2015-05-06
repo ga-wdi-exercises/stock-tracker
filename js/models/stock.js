@@ -104,6 +104,9 @@ var data = [
 ];
 
 // define your Stock model here
+var totalValue = 0
+var numShares = 0
+
 var Stock = function(symbol){
     for(i = 0; i < data.length; i++){
         if (data[i].Symbol == symbol){
@@ -111,8 +114,8 @@ var Stock = function(symbol){
     this.symbol = this.datum["Symbol"]
     this.price = this.datum["LastPrice"]
     this.companyName = this.datum["Name"]
-    this.numShares = 0
-    this.totalValue = 0
+    this.numShares = sharesField.value
+    this.totalValue = symbolField.value
         }
     }
 }
