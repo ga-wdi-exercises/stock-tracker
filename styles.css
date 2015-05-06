@@ -1,0 +1,43 @@
+body {
+  padding-left: 30px;
+  background: url( "gordon-gekko.png" ) no-repeat,
+              url( "eight_horns.png") repeat;
+  background-position: 90% -30%;
+}
+
+h1 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 4em;
+  color: white;
+}
+
+p {
+  font-family: "EB Garamond", serif;
+  font-size: 1.5em;
+  color: white;
+}
+
+input[type="submit"] {
+  margin-left: 10px;
+  border: none;
+  border-radius: 2px;
+  background-color: white;
+  color: #A8AC9A;
+  font-weight: bold;
+}
+
+#shares-container {
+  display: none;
+}
+
+#stocks {
+  display: none;
+  width: 30%;
+  margin: 50px 0 0 0;
+  padding: 10px;
+  border: 5px white solid;
+  border-radius: 5px;
+  background-color: white;
+  color: #A8AC9A;
+  font-weight: bold;
+}

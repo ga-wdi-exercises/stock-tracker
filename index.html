@@ -2,11 +2,29 @@
 <html>
   <head>
     <title>Stock Tracker</title>
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>BUY! SELL!</h1>
+    <p>Enter one of the six fascinating stocks on the market <br>to add to your portfolio.</p>
+    <form>
+      <input type="text" name="lookup" placeholder="Enter stock symbol." id="lookup-input">
+      <input type="submit" value="Submit" id="lookup-submit">
+    </form>
+    <div id="shares-container">
+      <p>Great choice! How many shares would <br>you like to buy?</p>
+      <form>
+        <input type="text" name="shares" placeholder="Enter shares." id="shares-input">
+        <input type="submit" value="Submit" id="shares-submit">
+      </form>
+    </div>
+    <div id="stocks">
+    </div>
+
     <script type="text/javascript" src="js/models/stock.js"></script>
     <script type="text/javascript" src="js/views/stock.js"></script>
     <script type="text/javascript" src="js/application.js"></script>
-  </head>
-  <body>
   </body>
 </html>
