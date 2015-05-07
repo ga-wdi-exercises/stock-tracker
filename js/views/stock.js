@@ -1,19 +1,22 @@
 // define your StockView here
 function StockView() {
-  $('#update-symbol').on('click', this.lookupSymbol.bind(this));
-  $('#update-shares').on('click', this.updateShares.bind(this));
+
+  var StockView = this
+
+  $('#update-symbol').on('click', StockView.lookupSymbol.bind(StockView));
+  $('#update-shares').on('click', StockView.updateShares.bind(StockView));
 }
 
 StockView.prototype = {
   lookupSymbol: function() {
     var symbol = $("#symbol-input").val();
-    this.model = new Stock(symbol);
+    this.model = new Stock(symbol); //connects the model to the view
     this.render();
     $('#cha-ching')[0].play();
   },
 
   updateShares: function() {
-    this.model.numShares = parseInt($('#num-shares').val());
+    this.model.numShares = parseInt($('#num-shares').val()); 
     this.render();
   },
 
