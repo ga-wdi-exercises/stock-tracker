@@ -7,7 +7,22 @@ practices in JS.
 
 Using the `data` variable included in `models/stock.js` to supply data, create a webpage for managing a stock portfolio.
 
-Your app should have the following constructors (and associated prototypes) as necesary:
+Your app should have the following constructors (and associated prototypes) as necessary:
+
+var bigHouse = new BigHouse();
+
+function BigHouse(){
+
+}
+
+function StockView() {
+  this.model
+}
+
+function Stock(){
+
+
+}
 
 
 - `StockView`

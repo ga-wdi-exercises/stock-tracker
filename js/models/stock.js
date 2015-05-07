@@ -104,3 +104,32 @@ var data = [
 ];
 
 // define your Stock model here
+
+
+function Stock(symbol){
+  this.symbol = symbol;
+  this.datum = data.filter(function(stock) {
+    return stock["Symbol"] === symbol;
+  })[0];
+  this.price = this.datum.LastPrice;
+  this.companyName = this.datum.Name;
+  this.numShares = 0;
+  // this.hardCodedTotalValue = this.numShares * this.price;
+  this.totalValue = function(){
+    return this.price * this.numShares;
+  };
+
+  // this.attempt1 = function(){
+  //   for(var i = 0; i <data.length; i++){
+  //     this.stock = 2;
+  //   }
+  // };
+}
+
+// var results = []
+// for (var i = 0; i < data.length; i++) {
+//   if (data[i]["Symbol"] === symbol) {
+//     results.push(data[i]);
+//   }
+// }
+// return results[0];
