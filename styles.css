@@ -13,3 +13,20 @@
   text-align: center;
   margin: 0 auto;
 }
+
+
+.smallBox {
+  margin:10px auto;
+  border: solid 2px black;
+  padding: 10px;
+  color: grey;
+  width:75%;
+  text-align:center;
+}
+
+.portfolioSummary{
+  border:solid 1px black;
+  width:20%;
+  text-align: center;
+  margin: 0 auto;
+}

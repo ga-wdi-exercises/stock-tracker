@@ -5,7 +5,9 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/models/stock.js"></script>
+    <script type="text/javascript" src="js/models/portfolio.js"></script>
     <script type="text/javascript" src="js/views/stock.js"></script>
+    <script type="text/javascript" src="js/views/portfolio.js"></script>
     <script type="text/javascript" src="js/application.js"></script>
   </head>
   <body>
@@ -21,6 +23,10 @@
       <button id="updateButton">Update</button>
     </form>
 
+    <button id="refresh">Refresh</button>
+    <button id="seePortfolio">See Portfolio</button>
+
+
     <div id="summary">
       <p>Symbol</p>
       <div id="symbol" class="box"></div>
@@ -30,7 +36,11 @@
       <div id="compName" class="box"></div>
       <p>Total Value</p>
       <div id="value" class="box"></div>
+      <button id="portfolio">Add to Portfolio</button>
     </div>
+
+    <hr>
+
 
   </body>
 </html>

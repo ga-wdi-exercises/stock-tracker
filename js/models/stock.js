@@ -8,7 +8,7 @@
   //Constructor function
   var Stock = function( ){
     this.companyName = "Company Name"
-    this.numShares = "Number of Shares"
+    this.numShares = 0
     this.price = "Price"
     this.symbol = "Symbol"
     this.totalValue = "Total Value"
@@ -16,37 +16,36 @@
 
   Stock.prototype = {
     getAjaxResponse: function( symbolName ){
-      console.log("this AJAX:", this)
-      console.log("symbolName:",symbolName)
       var lookupURL = "http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=" + symbolName
       $.ajax({
+        // http://dev.markitondemand.com/Api/v2/Lookup
+        //jsonp?input=NFLX
+        //http://dev.markitondemand.com/Api/v2/InteractiveChart/jsonp
+
+
         url: lookupURL,
         type: "GET",
         context: this,
         dataType: "jsonp"
       }).done(function( response ){
-        console.log("this DONE:", this)
         this.saveData(response);
-        console.log("this DONE AFTER:", this)
         stockView.render()
       }).fail(function(){
         console.log("AJAX request was not successful")
       }).always(function(){
-        console.log("this always happens!")
+        console.log("")
       })
     },
     updateShares: function( update ){
       this.numShares = update
-      this.totalValue = this.price * this.numShares
+      this.totalValue = (this.price * this.numShares).toFixed(2)
+      stockView.render()
+
     },
     saveData: function( response ){
-      console.log("this:", this)
       this.symbol = response.Symbol
       this.price = response.LastPrice
       this.companyName = response.Name
-      this.numShares = 0
-      this.totalValue = this.price * this.numShares
-      console.log("this:", this)
-
+      this.totalValue = (this.price * this.numShares).toFixed(2)
     }
   }
