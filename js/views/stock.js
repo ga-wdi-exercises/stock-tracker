@@ -1,22 +1,26 @@
 // define your StockView here
-var StockView = function(stock){
-	this.model = stock; //gives us access to the argument we passed in
-	// this.el = document.querySelector(some selector) //this is where you tell it where you want to see this being rendered in the html - the selector is for a DOM element
-	this.render();
+function StockView() {
+  $('#update-symbol').on('click', this.lookupSymbol.bind(this));
+  $('#update-shares').on('click', this.updateShares.bind(this));
 }
 
 StockView.prototype = {
-	render: function(){
-		var displayBox = document.getElementById("display")
+  lookupSymbol: function() {
+    var symbol = $("#symbol-input").val();
+    this.model = new Stock(symbol);
+    this.model.findStock();
+    this.render();
+    $('#cha-ching')[0].play();
+  },
 
-		var stocksymbol = document.querySelector(".stocksymbol")
-		var price = document.querySelector(".price")
-		var shares = document.querySelector(".shares")
-		var totalValue = document.querySelector(".total-value")
+  updateShares: function() {
+    this.model.numShares = parseInt($('#num-shares').val());
+    this.render();
+  },
 
-		stocksymbol.innerHTML = this.symbol
-		price.innerHTML = this.price
-		shares.innerHTML = this.shares
-		totalValue.innerHTML = this.totalValue
-	}
+  render: function() {
+    $("#stock-name").text(name);
+    $("#stock-price").text(price);
+    $("#total-value").text(this.model.numShares * price);
+  }
 }
