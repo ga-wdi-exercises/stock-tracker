@@ -109,19 +109,97 @@ var Stock = function(stock_search) {
   var self = this;
   // console.log("hello");
 
-  data.forEach( function(stock) {
-    // console.log("Symbol equals")
-    // console.log(stock["Symbol"])
-    if (stock_search.toUpperCase() === stock["Symbol"]) {
-      // console.log("match");
-      self.symbol = stock["Symbol"]
-      // The info is the price, companyName and totalValue.
-      self.price = stock["LastPrice"]
-      self.companyName = stock["Name"]
-      // console.log(self.companyName)
-      self.totalValue = stock["MarketCap"]
-      // break;
-    }
+//var Stock = function(datum, numShares) {
+// this.price = datum.LastPrice
+// this.name = datum.name
+// this.numShares = numShares
+// this.symol = datum.Symbol
+// this.totalvalue=this.price*this.numShares
+//
+//for(var i =0;i<data.length;i++){
+//  var datum = data[i]
+//    if( symbol === stock.Symbol){
+//    return new Stock(datum)
+//}
+//}
+// BELOW GOES IN VIEW JS MODEL FILE
+//form.addEventListener("submit",function(){
+//   event.preventDefault()
+//   var symbol = symbolInput.value
+//   var shares =  numShares.value
+// var datum = Stock.lookup(symbol)
+//  if(datum){
+//  var stock = new Stock(datum,shares)
+//  var stockView = new StockView(stock)
+//}
+//else P
+// alert("Not Found")
+//}
+//}
 
-  });
+//API invalidates below
+  // data.forEach( function(stock) {
+  //   // console.log("Symbol equals")
+  //   // console.log(stock["Symbol"])
+  //   if (stock_search.toUpperCase() === stock["Symbol"]) {
+  //     // console.log("match");
+  //     self.symbol = stock["Symbol"]
+  //     // The info is the price, companyName and totalValue.
+  //     self.price = stock["LastPrice"]
+  //     self.companyName = stock["Name"]
+  //     // console.log(self.companyName)
+  //     self.totalValue = stock["MarketCap"]
+  //     // break;
+  //   }
+  //
+  // });
+
 }
+
+//API OUTPOUT
+
+
+
+Stock.lookupAPI =  function() {
+  var self = this
+  console.log("Starting");
+
+    var stockapiv2 = "http://dev.markitondemand.com/Api/v2/Lookup/jsonp?symbol="+newStockText
+    symbol = symbol.toUpperCase();
+    $.ajax({
+      url: stockapiv2,
+      type: 'GET',
+      dataType:'json',
+      context = self }).done(function(response){
+        self.price = response.LastPrice;
+        self.name = response.Name;
+      }).fail(function(){
+        console.log("FAIL");
+      }).always(function(){
+        console.log("ELSE");
+      })
+    };
+
+
+
+
+
+
+// Stock.Fetch = function(stockSymbol) {
+  // loadCards: function(response) {
+  //   this.cards = [];
+  //   for(var i = 0; i < response.length; i++){
+  //     var card = new Card(response[i].id, response[i].description, response[i].completed);
+  //     this.cards.push(card);
+  //   }
+  // }
+
+}
+
+//   [
+//     {
+// 	"Symbol":"NFLX",
+// 	"Name":"Netflix Inc",
+// 	"Exchange":"NASDAQ"
+//     }
+// ]

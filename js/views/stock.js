@@ -2,10 +2,21 @@
 
   //forEach will pull each array object(stock) from the data array
   var StockView = function(data_array){
+
+    //Jesse alternative: var StockView = function (stock){
+    // var stocks = document.querySelector(".stock")
+    // stocks.innerHTML =""
+    // var container = document.createElement("div")
+    // container.innerHTML = stock.name+ ": "+"$"+stock.totalvalue
+    // stocks.appendChild( container )
+    //
+    //}
     // below 2 was commented out by Adam
 
-    var searchStock = document.querySelector("#search-stock-button");
-    searchStock.addEventListener("click", this.lookupSymbol.bind(this));
+
+//USING API
+    // var searchStock = document.querySelector("#search-stock-button");
+    // searchStock.addEventListener("click", this.lookupSymbol.bind(this));
 
     this.stockAttributeList = document.querySelector(".stock-attributes")
   // // this.searchStock.bind(this) ) //not needed
