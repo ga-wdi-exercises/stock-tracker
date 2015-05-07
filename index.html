@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Stock Tracker</title>
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="js/models/stock.js"></script>
-    <script type="text/javascript" src="js/views/stock.js"></script>
-    <script type="text/javascript" src="js/application.js"></script>
-  </head>
-  <body>
-  </body>
+<head>
+  <title>Stock Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body>
+  <header>
+    <nav>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+
+      <div id="lookupSymbol">
+
+        <form id="stockSymbol">
+
+          <label for="search" class="symbol">Search Symbol:</label>
+          <input type="text" id="search"/>
+
+          <label for="shares" class="shares">Enter Shares Amount:</label>
+          <input type="number" id="shares">
+
+          <input type="submit" id="submit">
+
+        </form>
+      </div>
+
+      <div id ="showStocks">
+
+      </div>
+
+
+
+      <div id="updateShares">
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+  </footer>
+
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/models/stock.js"></script>
+<script type="text/javascript" src="js/views/stock.js"></script>
+<script type="text/javascript" src="js/application.js"></script>
 </html>
