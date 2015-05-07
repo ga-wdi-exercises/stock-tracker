@@ -20,6 +20,7 @@ StockView.prototype = {
 
   renderName: function() {
     $("#stock-name").text(name);
+    // $("#stock-price").text(lastPrice);
   },
 
   renderValue: function(){

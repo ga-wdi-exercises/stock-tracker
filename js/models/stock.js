@@ -3,8 +3,7 @@ function Stock(symbol) {
   this.symbol = symbol;
   this.numShares = 0;
   this.name = name;
-  lastPrice = 0;
-  // this.price = price;
+  // this.lastPrice = lastPrice;
 }
 
 Stock.prototype = {
