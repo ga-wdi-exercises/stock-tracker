@@ -35,9 +35,11 @@ StockView.prototype.submitEventHandler = function(event) {
 
 StockView.prototype.stockLookUp = function(symbolValue) {
   this.model = new Stock(symbolValue);
-  console.log(this.model);
+  console.log(this.model.name);
+  console.log(this.model.symbol);
   console.log(this.model.totalValue());
-  document.getElementById("name").innerText = "Name: " + this.model.companyName + "";
+  console.log(this.model.price)
+  document.getElementById("name").innerText = "Name: " + this.model.name + "";
   document.getElementById("price").innerText = "Current Price: $" + this.model.price + "";
   document.getElementById("symbol").innerText = "Symbol: " + this.model.symbol + "";
 }
