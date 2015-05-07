@@ -7,9 +7,8 @@ function StockView() {
 StockView.prototype = {
   lookupSymbol: function() {
     var symbol = $("#symbol-input").val();
-    this.model = new Stock(symbol);
-    this.render();
-    $('#cha-ching')[0].play();
+    Stock.findBySymbol(symbol, this.loadStock.bind(this));
+
   },
 
   updateShares: function() {
@@ -18,8 +17,17 @@ StockView.prototype = {
   },
 
   render: function() {
+
     $("#stock-name").text(this.model.companyName);
     $("#stock-price").text(this.model.price);
     $("#total-value").text(this.model.totalValue());
+  },
+  loadStock: function(stock){
+    if (stock){
+      this.model = stock;
+      console.log(this);
+      console.log(this.model);
+      this.render();
+    }
   }
 }
