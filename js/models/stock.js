@@ -1,21 +1,33 @@
 // define your Stock model here
-function Stock(symbol) {
+function Stock(symbol, callback) {
   this.symbol = symbol;
   this.numShares = 0;
 
 
     var markItOnDemand = "http://dev.markitondemand.com/api/v2/quote/jsonp?symbol" + symbol
-    $.ajax({
+    $.ajax
+    ({
 
-      url: markItOnDemand.com,
+      url: markItOnDemand,
       type: "GET",
-      dataType: "jsonp"
+      dataType: "jsonp",
       context: this
-    }).done(function(response){
-      console.log(response.Low)
-    }).fail(function(){
-      console.log("ajax request not successful")
+    }).done(function(response)
+    {
+      for( var property in response )
+      // {
+  //      if( response.prop(property))
+        {
+          this[property] = response [property]
+        }
+      //  StockView.render()
+      // }
+    //  console.log("success!")
+    // }).fail(function(){
+    //   console.log("ajax request not successful")
     })
+
+     //callback( this )
   }
 
 
