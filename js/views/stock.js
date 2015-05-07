@@ -9,7 +9,6 @@ StockView.prototype = {
     var symbol = $("#symbol-input").val();
     this.model = new Stock(symbol);
     this.render();
-    $('#cha-ching')[0].play();
   },
 
   updateShares: function() {
