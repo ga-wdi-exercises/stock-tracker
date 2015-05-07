@@ -1,3 +1,5 @@
 // instantiate a StockView
-var stock = new Stock("AAPL");
-var stockView = new StockView("#stock", stock);
+$('document').ready(function() {
+	stockView = new StockView();
+});
+
