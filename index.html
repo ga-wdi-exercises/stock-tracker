@@ -3,10 +3,20 @@
   <head>
     <title>Stock Tracker</title>
     <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>Stock-Tracker!<header>
+      <form>
+        <input type='search' class='symbol' placeholder='Search a stock'>
+        <input type='number' value='0' class='number-of-shares' placeholder='Please enter # of shares'>
+        <button class='submit'>Search</button>
+      </form>
+      <div class='stocks'>
+      </div>
+
     <script type="text/javascript" src="js/models/stock.js"></script>
     <script type="text/javascript" src="js/views/stock.js"></script>
     <script type="text/javascript" src="js/application.js"></script>
-  </head>
-  <body>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   </body>
 </html>
