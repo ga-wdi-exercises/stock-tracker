@@ -7,9 +7,11 @@ function StockView() {
 StockView.prototype = {
   lookupSymbol: function() {
     var symbol = $("#symbol-input").val();
-    this.model = new Stock(symbol);
-    this.render();
-    $('#cha-ching')[0].play();
+    new Stock(symbol, function(stock){
+      this.model = stock
+      this.render()
+      $('#cha-ching')[0].play();
+    }.bind(this));
   },
 
   updateShares: function() {
@@ -18,8 +20,8 @@ StockView.prototype = {
   },
 
   render: function() {
-    $("#stock-name").text(this.model.companyName);
-    $("#stock-price").text(this.model.price);
+    $("#stock-name").text(this.model.Name);
+    $("#stock-price").text(this.model.LastPrice);
     $("#total-value").text(this.model.totalValue());
   }
 }
