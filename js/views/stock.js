@@ -8,7 +8,8 @@ StockView.prototype = {
   lookupSymbol: function() {
     var symbol = $("#symbol-input").val();
     this.model = new Stock(symbol);
-    this.render();
+    this.model.stockSearchAndSet( this );
+    console.log( "Here's the stock: " + this.model );
     $('#cha-ching')[0].play();
   },
 
