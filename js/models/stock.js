@@ -127,7 +127,7 @@ Stock.prototype = {
 
 
 function getData(symbol){
-  $.ajax({ url: "http://dev.markitondemand.com/api/v2/quote/jsonp?symbol="+ this.input + "", method: "get", dataType: "jsonp"}).done(function(data) {
+  $.ajax({ url: "http://dev.markitondemand.com/api/v2/quote/jsonp?symbol="+ this.input + "", method: "get", dataType: "jsonp", context: this}).done(function(data) {
       name = data.Name;
       price = data.LastPrice;
       symbol = data.Symbol;
