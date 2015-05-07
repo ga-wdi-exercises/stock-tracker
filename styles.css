@@ -1,0 +1,36 @@
+body {
+  background: #acccc6;
+}
+header {
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: arial, sans-serif;
+  color: #0e2f44;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#symbolView {
+  border: solid #0e2f44 2px;
+  border-radius: 10px;
+  width: 500px;
+  margin: auto;
+  background: #ffffe0;
+  font-family: arial, sans-serif;
+  font-size: 30px;
+  color: #0e2f44;
+}
+
+#sharesView {
+  border: solid #0e2f44 2px;
+  width: 500px;
+  margin: auto;
+  background: #ffffe0;
+  border-radius: 10px;
+  font-family: arial, sans-serif;
+  font-size: 30px;
+  color: #0e2f44;
+}
