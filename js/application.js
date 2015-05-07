@@ -16,5 +16,4 @@ $(function(){
     //$(this).find this jquerizes a non jquery thing and you can call jquery stuff on it
     //.on does the same thing as addEventListener but it is for jquery
   })
-
 })

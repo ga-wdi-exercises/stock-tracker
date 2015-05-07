@@ -27,7 +27,6 @@ function StockView(){
   this.updateShares = function(shares){
      this.model.numShares = shares;
      this.render();
-
-  }
+  };
 
 }

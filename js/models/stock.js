@@ -108,23 +108,59 @@ var data = [
 
 function Stock(symbol){
   this.symbol = symbol;
-  this.datum = data.filter(function(stock) {
-    return stock["Symbol"] === symbol;
-  })[0];
-  this.price = this.datum.LastPrice;
-  this.companyName = this.datum.Name;
+  // this.datum = data.filter(function(stock) {
+  //   return stock["Symbol"] === symbol;
+  // })[0];
+  this.price = this.datum().LastPrice;
+  this.companyName = this.datum().Name;
   this.numShares = 0;
   // this.hardCodedTotalValue = this.numShares * this.price;
   this.totalValue = function(){
     return this.price * this.numShares;
   };
 
+
+}
+
+Stock.prototype = {
+  datum: function(){
+    var symbol = this.symbol
+
+    $.ajax({
+      type: 'GET',
+      dataType: 'json',
+      url: "http://dev.markitondemand.com/api/v2/quote/jsonp?symbol=" + symbol,
+      // http://dev.markitondemand.com/api/v2/quote/json?symbol=aapl
+      // xhrFields: {
+      //   withCredentials: true
+      // },
+
+    //  beforeSend: function (request)
+    //         {
+    //             request.setRequestHeader("Access-Control-Allow-Origin");
+    //         },
+      success: function(response){
+        console.log("holy shit")
+
+
+      }
+    })
+
+return {LastPrice: 100}
+  }
+
+}
+
+
+
+
   // this.attempt1 = function(){
   //   for(var i = 0; i <data.length; i++){
   //     this.stock = 2;
   //   }
   // };
-}
+
+
 
 // var results = []
 // for (var i = 0; i < data.length; i++) {
