@@ -9,8 +9,12 @@ StockView.prototype = {
     var symbol = $("#symbol-input").val();
     new Stock(symbol, function(stock){
       this.model = stock
-      this.render()
-      $('#cha-ching')[0].play();
+      if( stock.Message ){
+        alert( stock.Message )
+      } else{
+	this.render()
+	$('#cha-ching')[0].play();
+      }
     }.bind(this));
   },
 
