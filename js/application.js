@@ -9,4 +9,6 @@
 // updateShares: when the user enters a number of shares,
     // it should update the existing associated stock model, and then re-render the view
 
-    var stockView = new StockView()
+    $('document').ready(function() {
+      var stockView = new StockView();
+    });

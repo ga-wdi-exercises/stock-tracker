@@ -37,3 +37,22 @@ Finally, add some style to make it look nicer!
 ## Can I use jQuery?
 
 Sure!
+
+
+
+
+
+Stock
+- lookup (on the class similiar to .find in AR)
+
+
+
+Stock View
+- html
+- Not Found
+- Render Method
+
+Ui
+- Search for Stocks
+- number of shares
+ Interation w/ Stock Model - How does user input interact with stock model-
