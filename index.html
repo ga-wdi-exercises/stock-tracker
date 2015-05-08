@@ -3,10 +3,57 @@
   <head>
     <title>Stock Tracker</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/models/stock.js"></script>
     <script type="text/javascript" src="js/views/stock.js"></script>
     <script type="text/javascript" src="js/application.js"></script>
+
   </head>
   <body>
-  </body>
-</html>
+    <div id=stock_search>
+      <input id="new-stock-search" type="text" placeholder="Stock Symbol"/>
+      <button id="search-stock-button">Enter Stock Symbol</button>
+    </div>
+
+    <div id="stock-display" class="stock_view">
+      <h2 class="stock-name">Stock Name</h2>
+      <ul class="stock-attributes">
+      </ul>
+    </div>
+
+    <div id=stock_shares>
+      <input id="number-of-shares" type="integer" placeholder="Number of Shares"/>
+      <button id="stock-shares-button">Enter Number of Shares</button>
+    </div>
+    <h3 class="total-value">Total Share Value:</h3>
+    <div id=total-share-value></div>
+    <!-- this.newStockText = document.querySelector("#new-stock-search") -->
+
+
+
+<!-- StockView
+
+model: points to an instance of a Stock model.
+render: updates the HTML on the page to reflect the info of the associated stock model. The info is the price, companyName and totalValue.
+'lookupSymbol': when the user enters a symbol, this should instantiate a new instance of a stock model and associate it with the model attribute of the view. It should then re-render the view.
+updateShares: when the user enters a number of shares, it should update the existing associated stock model, and then re-render the view -->
+
+<!--
+var data = [
+    {
+        "Status": "SUCCESS",
+        "Name": "Apple Inc",
+        "Symbol": "AAPL",
+        "LastPrice": 128.7,
+        "Change": 0,
+        "ChangePercent": 0,
+        "Timestamp": "Mon May 4 15:59:00 UTC-04:00 2015",
+        "MSDate": 42128.6659722222,
+        "MarketCap": 741444561000,
+        "Volume": 3318886,
+        "ChangeYTD": 110.38,
+        "ChangePercentYTD": 16.5972096394274,
+        "High": 130.55,
+        "Low": 128.27,
+        "Open": 129.58
+    }, -->
